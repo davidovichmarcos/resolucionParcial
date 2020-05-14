@@ -2,8 +2,13 @@ package com.utn.models;
 
 public class GuitarraAcustica extends InstrumentoDeCuerda {
 
-    public GuitarraAcustica(String marca, double precio) {
+    private TipoMadera tipoMadera;
+
+    public GuitarraAcustica() {}
+
+    public GuitarraAcustica(String marca, double precio, TipoMadera tipoMadera) {
         super(marca, precio);
+        this.tipoMadera = tipoMadera;
         this.setCantidadCuerdas(6);
     }
 
@@ -14,7 +19,9 @@ public class GuitarraAcustica extends InstrumentoDeCuerda {
 
     @Override
     public String toString() {
-        return super.toString();
+
+        return super.toString() +
+                " tipoMadera="+ this.tipoMadera + " }";
     }
 
 }

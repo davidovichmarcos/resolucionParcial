@@ -2,8 +2,13 @@ package com.utn.models;
 
 public class GuitarraElectrica extends InstrumentoDeCuerda implements IElectrico{
 
-    public GuitarraElectrica(String marca, double precio) {
+    private String modelo;
+
+    public GuitarraElectrica() {}
+
+    public GuitarraElectrica(String marca, double precio, String modelo) {
         super(marca, precio);
+        this.modelo = modelo;
         this.setCantidadCuerdas(6);
     }
 
@@ -14,7 +19,8 @@ public class GuitarraElectrica extends InstrumentoDeCuerda implements IElectrico
 
     @Override
     public String toString() {
-        return super.toString();
+        return super.toString() +
+                " modelo="+ this.modelo + " }";
     }
 
     @Override

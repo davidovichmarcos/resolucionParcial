@@ -2,8 +2,13 @@ package com.utn.models;
 
 public class Bajo extends InstrumentoDeCuerda implements IElectrico {
 
-    public Bajo(String marca, double precio) {
+    private String modelo;
+
+    public Bajo() {}
+
+    public Bajo(String marca, double precio, String modelo) {
         super(marca, precio);
+        this.modelo = modelo;
         this.setCantidadCuerdas(4);
     }
 
@@ -14,7 +19,8 @@ public class Bajo extends InstrumentoDeCuerda implements IElectrico {
 
     @Override
     public String toString() {
-        return super.toString();
+        return super.toString() +
+                " modelo="+ this.modelo + " }";
     }
 
     @Override

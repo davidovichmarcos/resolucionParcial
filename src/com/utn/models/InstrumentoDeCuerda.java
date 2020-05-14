@@ -4,6 +4,8 @@ public abstract class InstrumentoDeCuerda extends Instrumento{
 
     private Integer cantidadCuerdas;
 
+    public InstrumentoDeCuerda() {}
+
     public InstrumentoDeCuerda(String marca, double precio) {
         this.setMarca(marca);
         this.setPrecio(precio);
@@ -21,6 +23,6 @@ public abstract class InstrumentoDeCuerda extends Instrumento{
     public String toString() {
         return super.toString() +
                 " ,cantidadCuerdas= " + cantidadCuerdas +
-                " }";
+                ",";
     }
 }

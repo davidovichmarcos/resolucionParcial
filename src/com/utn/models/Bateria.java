@@ -5,6 +5,8 @@ public class Bateria extends Instrumento {
     private Integer cantidadTambores;
     private Integer cantidadPlatillos;
 
+    public Bateria() {}
+
     public Bateria(String marca, Integer cantidadTambores, Integer cantidadPlatillos) {
         super(marca);
         this.cantidadTambores = validateTambores(cantidadTambores);
